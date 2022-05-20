@@ -104,14 +104,12 @@ namespace ConsoleApplication1
                 Console.WriteLine(dt);
             else
                 Console.WriteLine($"{str} is not a valid date string");
+
+            //A structure as a datatype
+       
         }
 
     }
   
-    
-
-   
-
-
 }
 
