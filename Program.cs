@@ -1,6 +1,4 @@
-﻿
-
-// C# program to illustrate the
+﻿// C# program to illustrate the
 // concept of inheritance
 using System;
 namespace ConsoleApplication1
@@ -105,8 +103,17 @@ namespace ConsoleApplication1
             else
                 Console.WriteLine($"{str} is not a valid date string");
 
-            //A structure as a datatype
-       
+            //A constant
+            const double pi = 3.14159;
+            // constant declaration 
+            double r;
+            Console.WriteLine("Enter Radius: ");
+            r = Convert.ToDouble(Console.ReadLine());
+
+            double areaCircle = pi * r * r;
+            Console.WriteLine("Radius: {0}, Area: {1}", r, areaCircle);
+            Console.ReadLine();
+
         }
 
     }
