@@ -77,6 +77,14 @@ public class IfExample
             }
         }
 
+        //while loop
+        int men = 1;
+        while (men <= 6)
+        {
+            Console.WriteLine(men);
+            men++;
+        }
+
         Console.Read();
 
     
