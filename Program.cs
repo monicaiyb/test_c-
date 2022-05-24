@@ -17,7 +17,7 @@ public class IfExample
         }
 
         //if elseif
-        //hck
+       
         Console.WriteLine("Enter a number to check grade:");
         int num = Convert.ToInt32(Console.ReadLine());
 
@@ -83,6 +83,31 @@ public class IfExample
         {
             Console.WriteLine(men);
             men++;
+        }
+
+        //Break and continue
+        for (int i = 1; i <= 10; i++)
+        {
+            if (i == 5)
+            {
+                break;
+            }
+            Console.WriteLine(i);
+        }
+
+    //goto statement
+    ineligible:
+        Console.WriteLine("You are not eligible to vote!");
+
+        Console.WriteLine("Enter your age:\n");
+        int age = Convert.ToInt32(Console.ReadLine());
+        if (age < 18)
+        {
+            goto ineligible;
+        }
+        else
+        {
+            Console.WriteLine("You are eligible to vote!");
         }
 
         Console.Read();
