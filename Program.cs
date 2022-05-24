@@ -1,122 +1,86 @@
-﻿// C# program to illustrate the
-// concept of inheritance
-using System;
-namespace ConsoleApplication1
+﻿using System;
+public class IfExample
 {
-    //An abstract does do anything within itself
-    public abstract class Customer
+    public static void Main(string[] args)
     {
-        private string _firstName;
-        private string _lastName;
-        private double d1;
-        private double d2;
+        //if else condition
+        Console.WriteLine("Enter a number:");
+        int num0 = Convert.ToInt32(Console.ReadLine());
 
- 
-        public string FirstName
+        if (num0 % 2 == 0)
         {
-            get
-            {
-                return _firstName;
-            }
+            Console.WriteLine("It is even number");
+        }
+        else
+        {
+            Console.WriteLine("It is odd number");
+        }
 
-            set
+        //if elseif
+        //hck
+        Console.WriteLine("Enter a number to check grade:");
+        int num = Convert.ToInt32(Console.ReadLine());
+
+        if (num < 0 || num > 100)
+        {
+            Console.WriteLine("wrong number");
+        }
+        else if (num >= 0 && num < 50)
+        {
+            Console.WriteLine("Fail");
+        }
+        else if (num >= 50 && num < 60)
+        {
+            Console.WriteLine("D Grade");
+        }
+        else if (num >= 60 && num < 70)
+        {
+            Console.WriteLine("C Grade");
+        }
+        else if (num >= 70 && num < 80)
+        {
+            Console.WriteLine("B Grade");
+        }
+        else if (num >= 80 && num < 90)
+        {
+            Console.WriteLine("A Grade");
+        }
+        else if (num >= 90 && num <= 100)
+        {
+            Console.WriteLine("A+ Grade");
+        }
+
+        //switch statement
+        Console.WriteLine("Enter a number for switch statement:");
+        int num1 = Convert.ToInt32(Console.ReadLine());
+
+        switch (num1)
+        {
+            case 10: Console.WriteLine("It is 10"); break;
+            case 20: Console.WriteLine("It is 20"); break;
+            case 30: Console.WriteLine("It is 30"); break;
+            default: Console.WriteLine("Not 10, 20 or 30"); break;
+        }
+
+        //for loop
+        for (int i = 1; i <= 10; i++)
+        {
+            Console.WriteLine(i);
+        }
+
+        //Nested for loop
+        for (int i = 1; i <= 3; i++)
+        {
+            for (int j = 1; j <= 3; j++)
             {
-                _firstName = value;
+                Console.WriteLine(i + " " + j);
             }
         }
 
-        public string LastName
-        {
-            get
-            {
-                return _lastName;
-            }
+        Console.Read();
 
-            set
-            {
-                _lastName = value;
-            }
-        }
-        public double Number1
-        {
-            get
-            {
-                return d1;
-            }
-
-            set
-            {
-                d1 = value;
-            }
-        }
-        public double Number2
-        {
-            get
-            {
-                return d2;
-            }
-
-            set
-            {
-                d2 = value;
-            }
-        }
-        public abstract void FullName();
+    
     }
-    // Inheriting class from the base that uses the methods and variables from the abstract class
-    class Program: Customer
-    {
-
-        static void Main(string[] args)
-        {
-            Program p = new Program();
-            p.FirstName = "Monica";
-            p.LastName = "Iyabo";
-            p.Number1 = 12345678912345.5d;
-            p.Number2 = 1.123456789123456d;
-            p.FullName(); 
-
-
-            Console.ReadLine();
-
-                   }
-        public override void FullName()
-        {
-            Console.WriteLine("Full Name:" + FirstName + " " + LastName+" "+Number1+" "+Number2);
-            DateTime dt2 = new DateTime(2015, 12, 31);
-            DateTime currentDateTime = DateTime.Now;
-            DateTime minDateTimeValue = DateTime.MinValue;
-            DateTime todaysDate = DateTime.Today; // returns today's date
-
-            TimeSpan time = new TimeSpan(10, 5, 25, 50);
-                
-            Console.WriteLine(dt2+" "+ currentDateTime+"   "+ todaysDate+"   "+ minDateTimeValue+ "    "+ time);
-
-
-            var str = "5/122020";
-            DateTime dt;
-
-            var isValidDate = DateTime.TryParse(str, out dt);
-
-            if (isValidDate)
-                Console.WriteLine(dt);
-            else
-                Console.WriteLine($"{str} is not a valid date string");
-
-            //A constant
-            const double pi = 3.14159;
-            // constant declaration 
-            double r;
-            Console.WriteLine("Enter Radius: ");
-            r = Convert.ToDouble(Console.ReadLine());
-
-            double areaCircle = pi * r * r;
-            Console.WriteLine("Radius: {0}, Area: {1}", r, areaCircle);
-            Console.ReadLine();
-
-        }
-
-    }
-  
 }
+
 
